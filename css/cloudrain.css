@@ -1,0 +1,231 @@
+
+
+/*--------------*\
+   #ANIMATIONS
+\*--------------*/
+
+
+
+@-webkit-keyframes aa_move {
+  0% {   -webkit-transform: translate3d(-50px,0,0); }
+  100% { -webkit-transform: translate3d(50px,0,0); }
+}
+
+@keyframes aa_move {
+  0% {   transform: translate3d(-50px,0,0); }
+  100% { transform: translate3d(50px,0,0); }
+}
+/*
+ * BEFORE MODIFYING THIS DOCUMENT READ THIS DOCUMENTATION CAREFULLY:
+ *
+ * http://cssguidelin.es/
+ *
+ * What differs from the guideline:
+ *
+ * - Indentations are 2px
+ * - Columns are 120px wide
+ * - don't use [] in html inside class="" for grouping
+ * - in html class="" don't use 2 space between classes, but put the related ones next to each other
+ * - low level commenting is not necessary but u can use, just try to explain the things u think is important
+ *
+ */
+
+
+
+
+
+/*
+ * LOADERS
+ *
+ *  1) BASE
+ *
+ *  2) CLOUD
+ *
+ *  3) MAGNIFYING GLASS
+ *
+ */
+
+
+/*--------*\
+   #BASE
+\*--------*/
+
+body {
+	background:#242424;
+}
+
+
+.mcl_loader {
+  position: relative;
+  width:  200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.mcl_loader--small {
+  width:  80px;
+  height: 80px;
+}
+
+
+
+.bc-404 {
+	background-image:url(../img/qode-one-404.png);	
+	background-position:center center;
+}
+
+/*---------*\
+   #CLOUD
+\*---------*/
+
+
+
+.mcl_loader--cloud {
+}
+
+  .mcl_cloud {
+    position: absolute;
+    top:  40%;
+    left: 50%;
+    width: 160px;
+    height: 90px;
+    margin: -45px 0 0 -75px;
+    -webkit-filter: drop-shadow(0 5px 10px rgba(0,0,0,.1));
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,.1));
+  }
+
+    .mcl_cloud__1, .mcl_cloud__2, .mcl_cloud__3, .mcl_cloud__4, .mcl_cloud__5 {
+      position: absolute;
+      background-color: #666;
+    }
+
+    .mcl_cloud__1, .mcl_cloud__2 {
+      bottom: 0;
+      width: 100px;
+    }
+
+    .mcl_cloud__1 {
+      left:   0;
+      height: 50px;
+      border-radius: 25px 0 0 25px;
+      animation: cloud-1 1.5s infinite ease-in-out alternate;
+    }
+
+    .mcl_cloud__2 {
+      right:  0;
+      height: 60px;
+      border-radius: 0 30px 30px 0;
+      animation: cloud-2 2s infinite ease-in-out alternate;
+    }
+
+    .mcl_cloud__3 {
+      top:  16px;
+      left: 20px;
+      width:  40px;
+      height: 40px;
+      border-radius: 50%;
+      animation: cloud-3 1s infinite ease-in-out alternate;
+    }
+
+    .mcl_cloud__4, .mcl_cloud__5 {
+      width:  50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .mcl_cloud__4 {
+      top:   0;
+      left: 50px;
+      animation: cloud-4 1.25s infinite ease-in-out alternate;
+    }
+
+    .mcl_cloud__5 {
+      top:    5px;
+      right: 25px;
+      animation: cloud-5 2.5s infinite ease-in-out alternate;
+    }
+
+    .mcl_rain {
+      position: absolute;
+      bottom: 0;
+      width:   5px;
+      height: 15px;
+      background-color: #777;
+      border-radius: 3px;
+      animation: rain 1s infinite ease-in forwards;
+    }
+
+    .mcl_rain--1 {
+      left: 40px;
+    }
+
+    .mcl_rain--2 {
+      left: 56px;
+    }
+
+    .mcl_rain--3 {
+      left: 72px;
+    }
+
+    .mcl_rain--4 {
+      left: 88px;
+    }
+
+    .mcl_rain--5 {
+      left: 104px;
+    }
+
+    .mcl_rain--6 {
+      left: 120px;
+    }
+
+    .mcl_rain:nth-child(6)  {animation-delay: 0s;}
+    .mcl_rain:nth-child(7)  {animation-delay: .5s;}
+    .mcl_rain:nth-child(8)  {animation-delay: .25s;}
+    .mcl_rain:nth-child(9)  {animation-delay: .75s;}
+    .mcl_rain:nth-child(10) {animation-delay: .1s;}
+    .mcl_rain:nth-child(11) {animation-delay: .35s;}
+    .mcl_rain:nth-child(12) {animation-delay: .6s;}
+    .mcl_rain:nth-child(13) {animation-delay: .85s;}
+    .mcl_rain:nth-child(14) {animation-delay: .15s;}
+    .mcl_rain:nth-child(15) {animation-delay: .65s;}
+    .mcl_rain:nth-child(16) {animation-delay:  0s;}
+    .mcl_rain:nth-child(17) {animation-delay: .25s;}
+    .mcl_rain:nth-child(18) {animation-delay: .5s;}
+    .mcl_rain:nth-child(19) {animation-delay: .75s;}
+    .mcl_rain:nth-child(20) {animation-delay: .35s;}
+    .mcl_rain:nth-child(21) {animation-delay: .85s;}
+
+
+@keyframes cloud-1 {
+  0%   {transform: translate3d( 0,  0,0)}
+  100% {transform: translate3d(-5px,0,0)}
+}
+
+@keyframes cloud-2 {
+  0%   {transform: translate3d(0,  0,0)}
+  100% {transform: translate3d(5px,0,0)}
+}
+
+@keyframes cloud-3 {
+  0%   {transform: translate3d( 0,  0,  0)}
+  100% {transform: translate3d(-2px,2px,0)}
+}
+
+@keyframes cloud-4 {
+  0%   {transform: scale(1)}
+  100% {transform: scale(1.1)}
+}
+
+@keyframes cloud-5 {
+  0%   {transform: translate3d(0,  0,  0)}
+  100% {transform: translate3d(3px,3px,0)}
+}
+
+@keyframes rain {
+  0%   {transform: translate3d(0,  0,  0); opacity: 1}
+  100% {transform: translate3d(0,100px,0); opacity: 0}
+}
+
+
+

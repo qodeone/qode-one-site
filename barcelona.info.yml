@@ -1,0 +1,38 @@
+name: barcelona
+type: theme
+description: A Starter Theme for uikitty - customize to your hearts content!
+core: 8.x
+base theme: uikitty
+libraries:
+  - uikitty/global
+  - barcelona/default
+stylesheets-remove:
+  - '@classy/css/components/tabs.css'
+  - core/assets/vendor/normalize-css/normalize.css
+
+regions:
+  navigation: 'Navigation'
+  branding: 'Branding'
+  mainmenu: 'Mainmenu'
+  accountmenu: 'Account Menu'
+  pagetitle: 'Page Title'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  breadcrumb: 'breadcrumb'
+  commerce: 'Commerce'
+  front: 'Front page'
+  frontmid: 'Front Mid Section'
+  frontlow: 'Front Lower Section'
+  tabs: 'Tabs'
+  content: 'Content'
+  security: 'Security'
+  slides: 'Slides'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  copyright: 'Copyright'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  offcanvas: 'Off-canvas'
+
+

@@ -1,0 +1,63 @@
+<?php
+/**
+ * @file
+ * The primary PHP file for the Barcelona sub theme of the UIkitty base theme.
+ *
+ */
+
+function barcelona_preprocess_page(&$vars) {
+    $site_config = \Drupal::config('system.site');
+    $vars['site_name'] = $site_config->get('name');
+    $vars['site_slogan'] = $site_config->get('slogan');
+}
+
+function barcelona_preprocess_menu_local_task(&$variables) {
+  if (!\Drupal::currentUser()->id()) {
+    $variables['link']['#options']['attributes']['class'][] = 'login';
+  }
+}
+
+function barcelona_preprocess_paragraph__insightly_form(&$variables) {
+  $paragraph = $variables['paragraph'];
+  if (!$paragraph->field_background_image->isEmpty()) {
+    $image = $paragraph->field_background_image->entity->url();
+    $variables['attributes']['style'][] = 'background-image: url("' . $image . '");';
+    $variables['attributes']['style'][] = 'background-size: cover;';
+    $variables['attributes']['style'][] = 'background-position: center center;';
+  }
+}
+function barcelona_preprocess_paragraph__hero_2col_image_right(&$variables) {
+  $paragraph = $variables['paragraph'];
+  if (!$paragraph->field_background_image->isEmpty()) {
+    $image = $paragraph->field_background_image->entity->url();
+    $variables['attributes']['style'][] = 'background-image: url("' . $image . '");';
+    $variables['attributes']['style'][] = 'background-size: cover;';
+    $variables['attributes']['style'][] = 'background-position: center center;';
+  }
+}
+function barcelona_preprocess_paragraph__team_img_right(&$variables) {
+  $paragraph = $variables['paragraph'];
+  if (!$paragraph->field_background_image->isEmpty()) {
+    $image = $paragraph->field_background_image->entity->url();
+    $variables['attributes']['style'][] = 'background-image: url("' . $image . '");';
+    $variables['attributes']['style'][] = 'background-size: cover;';
+    $variables['attributes']['style'][] = 'background-position: center center;';
+  }
+}
+function barcelona_preprocess_paragraph__tam_img_left(&$variables) {
+  $paragraph = $variables['paragraph'];
+  if (!$paragraph->field_background_image->isEmpty()) {
+    $image = $paragraph->field_background_image->entity->url();
+    $variables['attributes']['style'][] = 'background-image: url("' . $image . '");';
+    $variables['attributes']['style'][] = 'background-size: cover;';
+    $variables['attributes']['style'][] = 'background-position: center center;';
+  }
+}
+ /**
+  * Implements hook_preprocess_html().
+  */
+ function barcelona_preprocess_html(&$variables) {
+   if ($node = \Drupal::request()->attributes->get('node')) {
+     $variables['attributes']['class'][] = 'page-node-' . $node->id();
+   }
+ }

@@ -1,0 +1,14 @@
+<div{{ attributes.addClass('bc-widewhite') }}>
+
+<div class="uk-container uk-container-center">
+	<div class="uk-grid" data-uk-grid-margin="">
+		<div class="uk-width-medium-1-2 uk-margin-large-top">
+		    {{ content|without('field_hero_half', 'field_background_image') }}
+		</div>  
+		<div class="uk-width-medium-1-2" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">
+		    {{ content.field_hero_half }}
+		</div>
+	</div>
+</div>
+
+</div>

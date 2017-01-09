@@ -1,0 +1,28 @@
+default:
+  version: 1.x
+  css:
+    theme:
+      css/fonts.css: {}
+      css/app.css: {}
+  js:
+    js/app.js: {}
+
+countdown:
+  version: 1.x
+  js:
+    js/jquery.countdown.min.js: {}
+    js/jquery.animateNumber.min.js: {}
+    js/bfcountdown.js: {}
+    
+cloudrain:
+  version: 1.x
+  css:
+    theme:
+      css/cloudrain.css: {}
+      css/app.css: {}
+      
+p5js:
+  version: 1.x
+  js:
+    js/p5.min.js: {}
+    js/p5sketch-home.js: {}

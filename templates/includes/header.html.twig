@@ -1,0 +1,30 @@
+{{ attach_library('uikitty/sticky') }}
+<div id="header" data-uk-sticky="{media: 640, top:-200, animation: 'uk-animation-slide-top'}">
+	<div class="uk-margin-left uk-margin-right">
+        <nav class="uk-navbar uk-navbar-attached">
+            <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+            {{ page.branding }}
+            {{ page.mainmenu }}
+            <div class="uk-navbar-flip">
+                   {{ page.accountmenu }} 
+            </div>
+        </nav>
+	</div>	
+
+</div>
+
+{% if page.highlighted %}
+<div class="uk-container uk-container-center">
+    <div class="highlighted">
+        <aside class="layout-container section clearfix" role="complementary">
+            {{ page.highlighted }}
+        </aside>
+    </div>
+</div>
+{% endif %} {% if page.featured_top %}
+<div class="featured-top">
+    <aside class="featured-top__inner section layout-container clearfix" role="complementary">
+        {{ page.featured_top }}
+    </aside>
+</div>
+{% endif %}
