@@ -128,7 +128,12 @@ em {
 }
 .uk-navbar-brand {
     height:55px;
-    padding-left:0;
+    padding-left:5px;
+    margin-top:13px;
+}
+.uk-navbar-brand::before {
+	height:55px;
+	display:none;
 }
 .uk-navbar-toggle {
 	color:#fff;
